@@ -1,0 +1,5 @@
+﻿<ul id="todo-list">
+    {{#each todo in model}}
+        {{todo-item acceptChanges="acceptChanges" deleteTodo="deleteTodo" todoc=todo}}
+    {{/each}}
+</ul>

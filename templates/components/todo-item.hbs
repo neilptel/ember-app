@@ -1,0 +1,8 @@
+<li {{bind-attr class="todoc.isCompleted:completed  isEditing:editing"}}> <!--Another way is class="{{if todoc.isCompleted 'completed'}}"-->
+    {{#if isEditing}}
+        {{input type="text" class="edit" value=todoc.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    {{else}}
+        {{input type="checkbox" class="toggle" checked=todoc.isCompleted }}
+        <label {{action "editTodo" on="doubleClick"}}>{{todoc.title}}</label><button {{action "deleteTodo" todoc}} class="destroy"></button>
+    {{/if}}
+</li>
