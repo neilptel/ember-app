@@ -1,14 +1,14 @@
 ﻿import Ember from "ember";
 
 export default Ember.ArrayController.extend({
-  remaining: function(){
-    alert('called');
-      return this.filterBy('isCompleted',false).get('length');     ///'this' is controller, and it returns the items with matched properties
-   }.property('@each.isCompleted'), //THis is computed property: oberservs on the value here
-  inflection: function(){
-    var remaining = this.get('remaining');
-    return remaining === 1 ? 'item' : 'items';  //sigular vs plural
-  }.property('remaining')
+    remaining: function(){
+        alert('called');
+        return this.filterBy('isCompleted',false).get('length');     ///'this' is controller, and it returns the items with matched properties
+    }.property('@each.isCompleted'), //THis is computed property: oberservs on the value here
+    inflection: function(){
+        var remaining = this.get('remaining');
+        return remaining === 1 ? 'item' : 'items';  //sigular vs plural
+    }.property('remaining')
 
 });
 

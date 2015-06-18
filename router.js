@@ -10,6 +10,10 @@ Router.map(function() {
     this.route('active');
     this.route('complete');
   });
+
+  this.resource('order', {path: '/order'}, function() {
+    this.route('details');
+  });
   
 });
 
